@@ -39,7 +39,7 @@
             <h1>Tirando suas duvidas com a barbie</h1>
         </header>
         <main>
-            <img src="foto projeto.jpg" alt="imagem sobre um professor de tecnologia tirada do google">
+            <img src="bia.jpg" alt="imagem sobre um professor de tecnologia tirada do google">
             <div>
             VAMOS LAA!!</h2>
             <p class="artigo-autor">Por: Barbie</p>
@@ -47,7 +47,7 @@
             Primeira pergunta, essa vem do professor lucas.
             <p>"Barbie, o que você acha das aulas de programação?"</p>
             <p>Ah professor, por mais que muitos alunos não gostem, eu acho essencial, pois na atualidade a tecnologia está muito presente, então é importante nós ter consiencia para lidar com ela</p>
-            <button></button>
+            <button>✅​ <span>0</span></button>
         
             </div>
 
@@ -55,4 +55,15 @@
     
     
 </body>
+<script>
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", botaoClicado);
+
+    function botaoClicado(){
+        console.log("fui clicado");
+        let text = botao.querySelector("span");
+        text.textContent++;
+
+    }
+</script>
 </html>
