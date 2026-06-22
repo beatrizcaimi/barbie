@@ -21,8 +21,12 @@
                 text-align: center;
                 margin: 0 auto;
                 padding: 16px;
-                display: flex;
                 
+
+                
+            }
+            article{
+                display: flex;
             }
             img{
                 width: 200px;
@@ -39,7 +43,8 @@
             <h1>Tirando suas duvidas com a barbie</h1>
         </header>
         <main>
-            <img src="bia.jpg" alt="imagem sobre um professor de tecnologia tirada do google">
+            <article>
+<img src="bia.jpg" alt="imagem sobre um professor de tecnologia tirada do google">
             <div>
             VAMOS LAA!!</h2>
             <p class="artigo-autor">Por: Barbie</p>
@@ -48,22 +53,55 @@
             <p>"Barbie, o que você acha das aulas de programação?"</p>
             <p>Ah professor, por mais que muitos alunos não gostem, eu acho essencial, pois na atualidade a tecnologia está muito presente, então é importante nós ter consiencia para lidar com ela</p>
             <button>✅​ <span>0</span></button>
+            <button>❎​ <span>0</span></button>
+        
+            </div>
+            </article>
+            <article>
+ <img src="bia.jpg" alt="imagem sobre um professor de tecnologia tirada do google">
+            <div>
+            VAMOS LAA!!</h2>
+            <p class="artigo-autor">Por: Barbie</p>
+            <p>Ola blog, bem vindos a o meu segundo post, perdão pelo sumiço, a vida da barbie nem sempre é facil.</p>
+            Me fizeram muito uma pergunta, se eu ja fui professora de tecoloogia, e não nunca tive esse entendimento, mais nas minhas aulas de tecnologia da escola sempre fui uma boa aluna.
+            <p>"Lovers preciso ir, bjs"</p>
+            <button>✅​ <span>0</span></button>
+            <button>❎​ <span>0</span></button>
         
             </div>
 
+            </article>
+            
+
+        </main>
+        <main>
+           
         </main>
     
     
 </body>
 <script>
-    const botao = document.querySelector("button");
-    botao.addEventListener("click", botaoClicado);
-
-    function botaoClicado(){
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function(botao){
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado(){
         console.log("fui clicado");
         let text = botao.querySelector("span");
-        text.textContent++;
+        if (curtiu === false){
+             text.textContent++;
+             curtiu = true;
+        } else{
+            text.textContent--;
+            curtiu = false;
+        }
+       
+        }
 
-    }
+    })
+    
+
+    
+    
 </script>
 </html>
